@@ -1,4 +1,3 @@
-import React from 'react'
 import UserRegistrationForm from './components/UserRegistrationForm'
 import UserList from './components/UserList'
 
