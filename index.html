@@ -7,19 +7,54 @@
     <title>Formulário de Registro</title>
 </head>
 <body>
-    <h1>Registro de Usuário</h1>
-    <form id="registrationForm">
-        <label for="username">Nome de Usuário:</label>
-        <input type="text" id="username" name="username" required>
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br>
-        <label for="password">Senha:</label>
-        <input type="password" id="password" name="password" required>
-        <br>
-        <button type="submit">Registrar</button>
-    </form>
+    <div class="main-content">
+        <section>
+            <h2 class="section-title">Lista de Usuários</h2>
+            <div id="user-list-message" class="error-message" style="display: none;"></div>
+            <ul id="user-list" class="user-list">
+                <!-- Users will be loaded here -->
+            </ul>
+            <button id="show-more-btn" class="show-more-btn" style="display: none;">Mostrar mais</button>
+        </section>
+
+        <section>
+            <h2 class="section-title">Registrar Novo Usuário</h2>
+            <div id="form-message" class="form-message" style="display: none;"></div>
+            
+            <form id="registrationForm" class="register-form" novalidate>
+                <div class="form-group">
+                    <label for="username">Nome:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+380XXXXXXXXX" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Posição:</label>
+                    <div id="positions-container" class="positions-container">
+                        <!-- Positions will be loaded here -->
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="photo">Foto:</label>
+                    <input type="file" id="photo" name="photo" accept="image/jpeg,image/jpg" required>
+                    <div class="file-hint">JPG/JPEG, máximo 5MB, mínimo 70x70px</div>
+                </div>
+
+                <button type="submit" class="submit-btn">Registrar</button>
+            </form>
+        </section>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

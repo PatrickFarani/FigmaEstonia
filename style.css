@@ -157,3 +157,42 @@ input[type="file"] {
   font-size: 0.95rem;
   color: #e62e0c;
 }
+
+/* Error and success message styles */
+.error-message {
+  min-height: 20px;
+  font-size: 0.95rem;
+  color: #e62e0c;
+  background-color: #ffeaea;
+  border: 1px solid #f5c6c6;
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  display: none;
+  line-height: 1.4;
+}
+
+.error-message:empty {
+  display: none !important;
+}
+
+.success-message {
+  min-height: 20px;
+  font-size: 0.95rem;
+  color: #0d7d3e;
+  background-color: #e8f5e8;
+  border: 1px solid #a3d9a5;
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  display: block;
+  line-height: 1.4;
+}
+
+/* User info styling improvements */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
