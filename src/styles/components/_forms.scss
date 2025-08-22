@@ -1,0 +1,125 @@
+/* Form components - Input fields, labels, and form layout */
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+  
+  // On larger screens, take up available space
+  @include respond-to(md) {
+    flex: 1;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.form-label {
+  font-weight: $font-weight-medium;
+  color: $text-dark;
+  font-size: $font-size-base;
+  
+  // Required field indicator
+  &--required::after {
+    content: ' *';
+    color: $error-color;
+  }
+}
+
+// Input field styles
+.form-input {
+  @include form-input;
+  
+  &[type="text"],
+  &[type="email"],
+  &[type="tel"],
+  &[type="password"] {
+    height: 44px; // Touch-friendly height
+  }
+  
+  &[type="file"] {
+    padding: $spacing-sm;
+    border: 1px dashed $border-color;
+    background: rgba($background-color, 0.5);
+    
+    &:hover {
+      border-color: $primary-color;
+    }
+  }
+  
+  // Placeholder styling
+  &::placeholder {
+    color: $text-light;
+  }
+}
+
+// File upload specific styles
+.file-hint {
+  font-size: $font-size-sm;
+  color: $text-light;
+  font-style: italic;
+}
+
+// Position selection (radio buttons)
+.positions-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $spacing-lg;
+  margin-top: $spacing-sm;
+  
+  @include respond-to(sm) {
+    gap: $spacing-xl;
+  }
+}
+
+.position-label {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  cursor: pointer;
+  font-weight: $font-weight-normal;
+  transition: color $transition-fast ease;
+  
+  &:hover {
+    color: $primary-color;
+  }
+  
+  input[type="radio"] {
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    accent-color: $primary-color;
+  }
+}
+
+// Form messages (success/error)
+.form-message {
+  min-height: 24px;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  
+  &--error {
+    color: $error-color;
+  }
+  
+  &--success {
+    color: $success-color;
+  }
+  
+  // Icon for messages (using pseudo-elements)
+  &--error::before {
+    content: '⚠';
+    font-size: $font-size-base;
+  }
+  
+  &--success::before {
+    content: '✓';
+    font-size: $font-size-base;
+  }
+}

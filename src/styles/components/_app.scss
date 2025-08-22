@@ -1,0 +1,52 @@
+/* App component styles - Main layout and grid structure */
+
+.app {
+  min-height: 100vh;
+}
+
+.main-content {
+  display: grid;
+  gap: $spacing-xl;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-xl $spacing-lg;
+  
+  // Mobile first - single column
+  grid-template-columns: 1fr;
+  
+  // Tablet and up - two columns
+  @include respond-to(md) {
+    grid-template-columns: 1fr 1fr;
+    padding: $spacing-xxl $spacing-lg;
+  }
+  
+  // Large screens - wider spacing
+  @include respond-to(lg) {
+    gap: $spacing-xxl * 1.5;
+    padding: $spacing-xxl * 1.5 $spacing-lg;
+  }
+}
+
+// Section styles
+section {
+  @include card;
+  
+  // Ensure equal height on larger screens
+  @include respond-to(md) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.section-title {
+  color: $primary-color;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  margin: 0 0 $spacing-xl 0;
+  padding-bottom: $spacing-sm;
+  border-bottom: 2px solid $border-color;
+  
+  @include respond-to(md) {
+    font-size: 1.5rem;
+  }
+}

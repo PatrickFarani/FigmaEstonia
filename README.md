@@ -1,53 +1,98 @@
-# FigmaEstonia
-# Teste Técnico - Frontend
+# FigmaEstonia - Modern Frontend Application
 
-## ✅ Atividades
+Modern React application with responsive design, built following web development best practices.
 
-- [x] Estrutura do projeto (HTML/CSS)
-- [x] Requisição GET - Lista de usuários
-- [x] Requisição GET - Botões de posição
-- [x] Requisição POST - Formulário de registro
-- [x] Atualização dinâmica da lista após registro
-- [x] Ocultar botão “Mostrar mais” na última página
-- [x] Otimização de CSS, JS e imagens
-- [x] Publicação via GitHub Pages
-- [x] Verificação com PageSpeed, Lighthouse e WebPageTest
+## 🚀 Features
 
-Diretamente o repositório no GitHub.
+- **Modern React Architecture**: Component-based architecture with hooks and functional components
+- **Responsive Design**: Mobile-first approach with CSS Grid and Flexbox
+- **Sass Preprocessing**: Organized CSS with variables, mixins, and modular components
+- **Form Validation**: Complete client-side validation with error handling
+- **Local Storage**: Persistent data storage for user registrations
+- **User Management**: Dynamic user list with pagination ("Show More" functionality)
+- **Professional UI**: Clean, modern interface with proper spacing and typography
+- **Accessibility**: Semantic HTML, ARIA attributes, and keyboard navigation support
 
-1. Estrutura do projeto (HTML/CSS)
-Estruturas de projeto com HTML/CSS, criação de pastas, arquivos .html, .css, e layout em projetos de exemplo, como em tutoriais de Eleventy e outros frameworks.
-Estrutura de pastas e arquivos HTML/CSS
-2. Requisição GET - Lista de usuários
-códigos React/JS que fazem requisição GET para listar usuários.
-Função para listar usuários via GET
+## 🛠 Technology Stack
 
-4. Requisição GET - Botões de posição
-Não foi localizado exemplo exato de "botões de posição", mas há exemplos de requisições GET e manipulação de interface com botões.
-Pode ser necessário detalhar exatamente o que são "botões de posição".
+- **React 18.2**: Modern UI library
+- **Vite**: Fast build tool and development server
+- **Sass**: CSS preprocessor for enhanced styling capabilities
+- **ESLint**: Code linting and formatting
+- **Modern CSS**: CSS Grid, Flexbox, and custom properties
 
-6. Requisição POST - Formulário de registro
-POST para registro de usuários, incluindo exemplos de endpoints REST, como /auth/register.
-POST registro de usuário
-7. Atualização dinâmica da lista após registro
-Atualização de listas após requisições, especialmente em React com hooks como useEffect e atualização de estado após POST.
-Atualização de lista após requisição
+## 📁 Project Structure
 
-9. Ocultar botão “Mostrar mais” na última página
-Não há exemplo explícito para "mostrar mais", mas os padrões de paginação geralmente incluem lógica para esconder botões em listas paginadas.
-10. Otimização de CSS, JS e imagens
-Diversos materiais e arquivos de TODO e documentação mencionam otimização de CSS, JS e imagens, inclusive uso de ferramentas como PageSpeed, Lighthouse, minificação e compressão.
-Otimização mencionada em TODO
-Otimização em projetos
-11. Publicação via GitHub Pages
-projetos publicados com GitHub Pages, inclusive instruções para publicação e uso do Jekyll.
-GitHub Pages
-12. Verificação com PageSpeed, Lighthouse e WebPageTest
-Encontrados diversos exemplos e documentação de uso das ferramentas PageSpeed Insights, Lighthouse e WebPageTest para análise e verificação de performance.
-Referências a PageSpeed, Lighthouse e WebPageTest
-Uso de Lighthouse e PageSpeed
-Resumo
-Estrutura HTML/CSS, GET de lista de usuários, POST de registro, atualização dinâmica, otimização, publicação via GitHub Pages, verificação com ferramentas.
-Parcial/Genérico: GET de "botões de posição" (precisa detalhar).
-Possível, mas não explícito: Ocultar botão "Mostrar mais" na última página (padrão em paginação, mas não comprovado em código específico).
-Observação: Os resultados podem estar incompletos devido ao limite de 10 resultados por busca. Recomendo revisar os arquivos citados e, se necessário, buscar mais detalhes diretamente no repositório.
+```
+src/
+├── components/
+│   ├── UserRegistrationForm.jsx  # User registration form component
+│   └── UserList.jsx              # User list with pagination
+├── styles/
+│   ├── _variables.scss           # Sass variables (colors, spacing, typography)
+│   ├── _mixins.scss              # Reusable Sass mixins
+│   ├── _base.scss                # Base styles and reset
+│   ├── components/
+│   │   ├── _app.scss             # App layout and grid
+│   │   ├── _forms.scss           # Form components styling
+│   │   ├── _buttons.scss         # Button variations
+│   │   └── _user-list.scss       # User list styling
+│   └── main.scss                 # Main entry point for styles
+├── App.jsx                       # Main application component
+└── main.jsx                      # Application entry point
+```
+
+## 🎨 Design Features
+
+### Responsive Breakpoints
+- **Mobile**: < 768px (single column layout)
+- **Tablet**: 768px - 992px (two column grid)
+- **Desktop**: > 992px (optimized spacing and typography)
+
+### Component Organization
+- **User Registration Form**: Complete form with validation, multiple input types, and real-time feedback
+- **User List**: Dynamic list with user avatars, position badges, and registration dates
+- **Show More**: Pagination functionality that hides when all users are displayed
+
+### CSS Architecture
+- **Variables**: Consistent color palette, spacing, and typography scale
+- **Mixins**: Reusable patterns for buttons, cards, and responsive design
+- **Components**: Modular CSS organized by component functionality
+- **Base Styles**: Global reset, typography, and accessibility features
+
+## 🚦 Getting Started
+
+### Development
+```bash
+npm install
+npm run dev
+```
+
+### Production Build
+```bash
+npm run build
+npm run preview
+```
+
+### Code Quality
+```bash
+npm run lint
+```
+
+## 📱 User Experience
+
+- **Progressive Enhancement**: Works on all modern browsers
+- **Touch-Friendly**: Optimized for mobile interaction
+- **Visual Feedback**: Loading states, hover effects, and success/error messages
+- **Accessibility**: Proper contrast ratios, keyboard navigation, and screen reader support
+
+## ✅ Completed Requirements
+
+- [x] **React Migration**: Converted vanilla JS to modern React architecture
+- [x] **Responsive Layout**: Mobile-first design with CSS Grid and Flexbox
+- [x] **Sass Integration**: Complete CSS preprocessor setup with modular organization
+- [x] **Organized Styling**: CSS organized by functionality with extensive comments
+- [x] **Modern UI**: Professional interface following design system principles
+- [x] **Browser Compatibility**: Support for all modern browsers
+- [x] **Form Functionality**: User registration with validation and persistence
+- [x] **User Management**: Dynamic list with show more functionality

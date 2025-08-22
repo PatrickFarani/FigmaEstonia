@@ -1,0 +1,73 @@
+/* Base styles - Global CSS reset and typography */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px; // Base font size for rem calculations
+}
+
+body {
+  background: $background-color;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  line-height: 1.6;
+  color: $text-dark;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-semibold;
+  line-height: 1.2;
+  margin: 0 0 $spacing-lg 0;
+  color: $text-dark;
+}
+
+h1 {
+  font-size: 2rem;
+  
+  @include respond-to(md) {
+    font-size: 2.5rem;
+  }
+}
+
+h2 {
+  font-size: $font-size-xl;
+  
+  @include respond-to(md) {
+    font-size: 1.75rem;
+  }
+}
+
+p {
+  margin: 0 0 $spacing-lg 0;
+}
+
+// Links
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: color $transition-fast ease;
+  
+  &:hover {
+    color: $primary-hover;
+  }
+}
+
+// Lists
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// Accessibility
+:focus-visible {
+  outline: 2px solid $primary-color;
+  outline-offset: 2px;
+}

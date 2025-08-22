@@ -1,0 +1,94 @@
+// Responsive breakpoints mixin
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: $breakpoint-sm) {
+      @content;
+    }
+  }
+  @if $breakpoint == md {
+    @media (min-width: $breakpoint-md) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg {
+    @media (min-width: $breakpoint-lg) {
+      @content;
+    }
+  }
+  @if $breakpoint == xl {
+    @media (min-width: $breakpoint-xl) {
+      @content;
+    }
+  }
+}
+
+// Card component mixin
+@mixin card {
+  background: $white;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  box-shadow: $shadow-md;
+  padding: $spacing-lg;
+}
+
+// Button mixin
+@mixin button-base {
+  border: none;
+  border-radius: $border-radius;
+  cursor: pointer;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  padding: $spacing-sm $spacing-lg;
+  transition: all $transition-fast ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+// Primary button
+@mixin button-primary {
+  @include button-base;
+  background: $primary-color;
+  color: $white;
+  
+  &:hover:not(:disabled) {
+    background: $primary-hover;
+  }
+}
+
+// Secondary button
+@mixin button-secondary {
+  @include button-base;
+  background: transparent;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  
+  &:hover:not(:disabled) {
+    background: $primary-color;
+    color: $white;
+  }
+}
+
+// Form input mixin
+@mixin form-input {
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: $spacing-sm;
+  font-size: $font-size-base;
+  font-family: $font-family;
+  transition: border-color $transition-fast ease;
+  
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+  }
+  
+  &.error {
+    border-color: $error-color;
+  }
+}

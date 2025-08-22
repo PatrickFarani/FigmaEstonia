@@ -1,0 +1,142 @@
+/* User list component - Display registered users with responsive layout */
+
+.users-section {
+  // On larger screens, take up available space
+  @include respond-to(md) {
+    flex: 1;
+  }
+}
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  
+  // Empty state
+  &--empty {
+    padding: $spacing-xxl $spacing-lg;
+    text-align: center;
+    color: $text-light;
+    font-style: italic;
+    
+    &::before {
+      content: '👥';
+      display: block;
+      font-size: 3rem;
+      margin-bottom: $spacing-lg;
+    }
+  }
+}
+
+.user-item {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-md 0;
+  border-bottom: 1px solid $border-color;
+  flex-wrap: wrap;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+  
+  // Hover effect for interactivity
+  &:hover {
+    background: rgba($primary-color, 0.02);
+    margin: 0 (-$spacing-sm);
+    padding-left: $spacing-sm;
+    padding-right: $spacing-sm;
+    border-radius: $border-radius-sm;
+  }
+}
+
+// User avatar placeholder (using initials)
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: $primary-color;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-sm;
+  flex-shrink: 0;
+  
+  // Gradient background for variety
+  background: linear-gradient(135deg, $primary-color, $primary-hover);
+}
+
+// User information container
+.user-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+  min-width: 0; // Allow text truncation
+}
+
+.user-name {
+  font-weight: $font-weight-semibold;
+  color: $text-dark;
+  font-size: $font-size-base;
+  
+  // Truncate long names with ellipsis
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-email {
+  color: $text-medium;
+  font-size: $font-size-sm;
+  
+  // Truncate long emails with ellipsis
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Position badge
+.user-position {
+  background: rgba($primary-color, 0.1);
+  color: $primary-color;
+  padding: $spacing-xs $spacing-sm;
+  border-radius: $border-radius-sm;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  flex-shrink: 0;
+}
+
+// Registration date
+.user-date {
+  color: $text-lighter;
+  font-size: $font-size-xs;
+  flex-shrink: 0;
+  
+  @include respond-to(sm) {
+    margin-left: auto;
+  }
+}
+
+// Responsive adjustments
+@include respond-to(sm) {
+  .user-item {
+    flex-wrap: nowrap;
+  }
+  
+  .user-info {
+    flex-direction: row;
+    align-items: center;
+    gap: $spacing-lg;
+  }
+  
+  .user-name,
+  .user-email {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
