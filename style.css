@@ -87,9 +87,10 @@ section {
   background: none;
   border: 1px solid var(--primary);
   color: var(--primary);
-  padding: 8px 20px;
+  padding: 12px 24px;
   border-radius: var(--radius);
   cursor: pointer;
+  min-height: 48px;
   transition: background 0.1s;
 }
 .show-more-btn:hover {
@@ -100,24 +101,33 @@ section {
 .register-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
+  padding: 16px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
 }
 
-input[type="text"], input[type="email"], input[type="tel"] {
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"] {
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 8px;
+  padding: 12px;
   font-size: 1rem;
+  min-height: 48px;
+  box-sizing: border-box;
 }
 
 input[type="file"] {
-  margin-top: 4px;
+  margin-top: 8px;
+  padding: 8px;
+  min-height: 48px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
 }
 
 .file-hint {
@@ -143,9 +153,11 @@ input[type="file"] {
   color: #fff;
   border: none;
   border-radius: var(--radius);
-  padding: 10px 0;
+  padding: 12px 24px;
   cursor: pointer;
   font-size: 1rem;
+  min-height: 48px;
+  margin-top: 8px;
   transition: background 0.1s;
 }
 .submit-btn:hover {
