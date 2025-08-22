@@ -157,3 +157,19 @@ input[type="file"] {
   font-size: 0.95rem;
   color: #e62e0c;
 }
+
+#usuario-btn {
+  background-color: #0c7ce6;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-top: 16px;
+}
+
+#usuario-btn:hover {
+  background-color: #095bb5;
+}
